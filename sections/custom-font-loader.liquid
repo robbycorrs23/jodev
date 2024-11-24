@@ -1,0 +1,53 @@
+<style>
+@font-face {
+  font-family: 'Mr Dodo';
+  src: url('{{ "mrdodo-regular.woff2" | file_url }}') format("woff2"),
+       url('{{ "mrdodo-regular.ttf" | file_url }}') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rodetta';
+  src: url('{{ "rodetta.woff2" | file_url }}') format("woff2"),
+       url('{{ "rodetta.ttf" | file_url }}') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rooney Sans';
+  src: url({{ 'rooney-sans-regular.woff2' | file_url }}) format('woff2'),
+       url({{ 'rooney-sans-regular.ttf' | file_url }}) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rooney Sans';
+  src: url({{ 'rooney-sans-medium.woff2' | file_url }}) format('woff2'),
+       url({{ 'rooney-sans-medium.ttf' | file_url }}) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rooney Sans';
+  src: url({{ 'rooney-sans-bold.woff2' | file_url }}) format('woff2'),
+       url({{ 'rooney-sans-bold.ttf' | file_url }}) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Custom Fonts",
+  "settings": []
+}
+{% endschema %}

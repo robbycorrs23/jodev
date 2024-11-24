@@ -1,0 +1,305 @@
+{{ 'section-two-column-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="flex-hero color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  
+  {%- if section.settings.background_image != blank -%}
+    <div class="flex-hero__background">
+      {{ section.settings.background_image | image_url: width: 3840 | image_tag:
+        loading: 'lazy',
+        height: section.settings.height,
+        sizes: '100vw',
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="flex-hero__content">
+    <div class="flex-hero__wrapper">
+      <!-- Left Column -->
+      <div class="flex-hero__column flex-hero__column--left{% if section.settings.hide_left_mobile %} flex-hero__column--hide-mobile{% endif %}" 
+     style="flex: 0 0 {{ section.settings.left_column_width }}%">
+        <div class="flex-hero__column-content">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.column == 'left' -%}
+              {% render 'flex-hero-block', block: block %}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="flex-hero__column flex-hero__column--right{% if section.settings.hide_right_mobile %} flex-hero__column--hide-mobile{% endif %}"
+     style="flex: 0 0 {{ section.settings.right_column_width }}%">
+        <div class="flex-hero__column-content">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.column == 'right' -%}
+              {% render 'flex-hero-block', block: block %}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Flex Hero Columns",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "min": 300,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "label": "Minimum Section Height",
+      "default": 500
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Middle"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center",
+      "label": "Vertical Alignment"
+    },
+    {
+      "type": "range",
+      "id": "left_column_width",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Left Column Width",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "right_column_width",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Right Column Width",
+      "default": 50
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_left_mobile",
+      "label": "Hide Left Column on Mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_right_mobile",
+      "label": "Hide Right Column on Mobile",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ],
+          "label": "Column Position",
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "Small"
+            },
+            {
+              "value": "h1",
+              "label": "Medium"
+            },
+            {
+              "value": "h0",
+              "label": "Large"
+            }
+          ],
+          "default": "h1",
+          "label": "Heading Size"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ],
+          "label": "Column Position",
+          "default": "left"
+        },
+        {
+          "type": "html",
+          "id": "text",
+          "default": "<p>Share information about your brand</p>",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ],
+          "label": "Column Position",
+          "default": "left"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ],
+          "label": "Column Position",
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "Use Secondary Button Style"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Flex Hero Columns",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "column": "left",
+            "heading": "Left Column"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "column": "left",
+            "text": "<p>Add your content here</p>"
+          }
+        },
+        {
+          "type": "heading",
+          "settings": {
+            "column": "right",
+            "heading": "Right Column"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "column": "right",
+            "text": "<p>Add your content here</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

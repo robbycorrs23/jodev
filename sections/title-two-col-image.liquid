@@ -1,0 +1,114 @@
+{{ 'title-two-col-image.css' | asset_url | stylesheet_tag }}
+
+<div class="section color-{{ section.settings.color_scheme }} gradient" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width section-{{ section.id }}">
+    <div class="section-title-wrapper">
+      {%- if section.settings.title != blank -%}
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      
+      {%- if section.settings.subtitle != blank -%}
+        <div class="section-subtitle">{{ section.settings.subtitle }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="two-column-grid">
+      <div class="column-item">
+        {%- if section.settings.left_image != blank -%}
+          {{ section.settings.left_image | image_url: width: 400 | image_tag:
+            loading: 'lazy',
+            class: 'column-image',
+            widths: '180, 360, 540, 720'
+          }}
+        {%- endif -%}
+      </div>
+      <div class="column-item">
+        {%- if section.settings.right_image != blank -%}
+          {{ section.settings.right_image | image_url: width: 400 | image_tag:
+            loading: 'lazy',
+            class: 'column-image',
+            widths: '180, 360, 540, 720'
+          }}
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="bottom-image-container">
+      {%- if section.settings.bottom_image != blank -%}
+        {{ section.settings.bottom_image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          class: 'bottom-image',
+          widths: '375, 550, 750, 1100, 1500'
+        }}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Title with Images",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title Here"
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>Add your subtitle text here</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Column Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Column Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image",
+      "label": "Bottom Image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Title with Images"
+    }
+  ]
+}
+{% endschema %}

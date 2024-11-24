@@ -1,0 +1,256 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer color-{{ section.settings.color_scheme }} gradient" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <!-- Top Four Column Section -->
+    <div class="footer__content">
+      <!-- Logo and Social Column -->
+      <div class="footer__column footer__column--social">
+        {%- if section.settings.footer_logo != blank -%}
+          <div class="footer__logo-wrapper">
+            {{ section.settings.footer_logo | image_url: width: 150 | image_tag:
+              class: 'footer__logo',
+              loading: 'lazy',
+              width: 150
+            }}
+          </div>
+        {%- endif -%}
+        
+        {%- if section.settings.show_social -%}
+          <ul class="footer__social-icons" role="list">
+            {%- for i in (1..5) -%}
+              {%- assign icon_setting = 'social_icon_' | append: forloop.index -%}
+              {%- assign url_setting = 'social_url_' | append: forloop.index -%}
+              {%- if section.settings[icon_setting] != blank and section.settings[url_setting] != blank -%}
+                <li>
+                  <a href="{{ section.settings[url_setting] }}">
+                    {{ section.settings[icon_setting] | image_url: width: 24 | image_tag:
+                      class: 'footer__social-icon',
+                      loading: 'lazy',
+                      width: 24,
+                      height: 24
+                    }}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+
+      <!-- Three Menu Columns -->
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'link_list' -%}
+            <div class="footer__column footer__column--menu" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h2 class="footer__heading">{{ block.settings.heading }}</h2>
+              {%- endif -%}
+              
+              {%- if block.settings.menu != blank -%}
+                <ul class="footer__menu" role="list">
+                  {%- for link in block.settings.menu.links -%}
+                    <li>
+                      <a href="{{ link.url }}" class="footer__menu-item">
+                        {{ link.title }}
+                        {%- if link.title contains 'Careers' and block.settings.show_hiring_button -%}
+                          <span class="footer__hiring-button">We're hiring</span>
+                        {%- endif -%}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- Bottom Legal Section -->
+    <div class="footer__bottom">
+      {%- if section.settings.legal_menu != blank -%}
+        <ul class="footer__legal-menu" role="list">
+          {%- for link in section.settings.legal_menu.links -%}
+            <li>
+              <a href="{{ link.url }}" class="footer__legal-link">{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      <div class="footer__copyright">
+        {{ section.settings.copyright_text }}
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "header",
+      "content": "Social Media"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Show social media icons",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "social_icon_1",
+      "label": "Social Media Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "social_url_1",
+      "label": "Social Media Link 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "social_icon_2",
+      "label": "Social Media Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "social_url_2",
+      "label": "Social Media Link 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "social_icon_3",
+      "label": "Social Media Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "social_url_3",
+      "label": "Social Media Link 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "social_icon_4",
+      "label": "Social Media Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "social_url_4",
+      "label": "Social Media Link 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "social_icon_5",
+      "label": "Social Media Icon 5"
+    },
+    {
+      "type": "text",
+      "id": "social_url_5",
+      "label": "Social Media Link 5"
+    },
+    {
+      "type": "header",
+      "content": "Legal Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "legal_menu",
+      "label": "Legal Menu"
+    },
+    {
+      "type": "richtext",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "<p>© 2024 Your Company. All rights reserved.</p>"
+    },
+    {
+      "type": "color",
+      "id": "hiring_button_color",
+      "label": "Hiring Button Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "hiring_button_text_color",
+      "label": "Hiring Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Menu",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_hiring_button",
+          "label": "Show 'We're Hiring' Button",
+          "default": false,
+          "info": "Will show next to 'Careers' menu item"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        {
+          "type": "link_list"
+        },
+        {
+          "type": "link_list"
+        },
+        {
+          "type": "link_list"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

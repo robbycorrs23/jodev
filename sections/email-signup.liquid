@@ -1,0 +1,154 @@
+{{ 'email-signup.css' | asset_url | stylesheet_tag }}
+
+<div class="section color-{{ section.settings.color_scheme }} gradient" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width section-{{ section.id }}">
+    <div class="es-title-wrapper">
+      {%- if section.settings.title != blank -%}
+        <h2 class="es-title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      
+      {%- if section.settings.subtitle != blank -%}
+        <div class="es-subtitle">{{ section.settings.subtitle }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="es-form-wrapper">
+      {%- form 'customer', class: 'es-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="es-input-group">
+          <input
+            type="email"
+            name="contact[email]"
+            id="Email-{{ section.id }}"
+            class="es-input"
+            value="{{ form.email }}"
+            placeholder="Your email"
+            required
+          >
+          <button type="submit" class="es-button" name="commit" aria-label="Subscribe">
+            {%- if section.settings.submit_image != blank -%}
+              {{ section.settings.submit_image | image_url: width: 24 | image_tag:
+                loading: 'lazy',
+                class: 'es-submit-icon',
+                width: 24,
+                height: 24
+              }}
+            {%- endif -%}
+          </button>
+        </div>
+      {%- endform -%}
+    </div>
+
+    {%- if section.settings.below_text != blank -%}
+      <div class="es-below-text">
+        {{ section.settings.below_text }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.bottom_image != blank -%}
+      <div class="es-bottom-image">
+        {{ section.settings.bottom_image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          widths: '375, 550, 750, 1100, 1500'
+        }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Email Signup",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Sign up for updates"
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>Stay in the loop with our latest news</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "submit_image",
+      "label": "Submit Button Image"
+    },
+    {
+      "type": "html",
+      "id": "below_text",
+      "label": "Text Below Form",
+      "default": "<p>By subscribing you agree to receive our promotional marketing materials</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image",
+      "label": "Bottom Image"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border Radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Email Signup"
+    }
+  ]
+}
+{% endschema %}

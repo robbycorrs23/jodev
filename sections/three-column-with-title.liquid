@@ -1,0 +1,137 @@
+{{ 'three-column-with-title.css' | asset_url | stylesheet_tag }}
+
+<div class="section section-three-col color-{{ section.settings.color_scheme }} gradient" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width section-{{ section.id }}">
+    <div class="section-title-wrapper">
+      {%- if section.settings.title != blank -%}
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      
+      {%- if section.settings.subtitle != blank -%}
+        <div class="section-subtitle">{{ section.settings.subtitle }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="column-grid">
+      {%- for block in section.blocks -%}
+        <div class="column-item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 400 | image_tag:
+              loading: 'lazy',
+              class: 'column-image',
+              widths: '180, 360, 540, 720',
+              height: 400,
+              width: 400
+            }}
+          {%- endif -%}
+          
+          {%- if block.settings.title != blank -%}
+            <h3 class="column-title" style="background-color: {{ block.settings.title_background }}">
+              {{ block.settings.title }}
+            </h3>
+          {%- endif -%}
+          
+          {%- if block.settings.text != blank -%}
+            <div class="column-text">{{ block.settings.text }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Three Column Feature",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Feature Section"
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>Add a subtitle to introduce your feature columns</p>"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "color",
+          "id": "title_background",
+          "label": "Title Background",
+          "default": "#f4f4f4"
+        },
+        {
+          "type": "html",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Share information about your features</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Column Feature",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

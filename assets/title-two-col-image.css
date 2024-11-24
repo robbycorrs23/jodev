@@ -1,0 +1,57 @@
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: Rodetta;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-family: RooneySans;
+  font-size: 18px;
+  font-weight: 380;
+  line-height: 24.3px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.two-column-grid {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  max-width: 336px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 749px) {
+  .two-column-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.column-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bottom-image-container {
+  margin-top: 2rem;
+}
+
+.bottom-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
