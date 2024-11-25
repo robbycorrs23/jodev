@@ -96,9 +96,65 @@
       "settings": {
         "title": "9 out of 10 customers see the difference",
         "subtitle": "<p>Result derived from a survey of 1,239 customers<sup class=\"caption-sup\">1</sup></p>",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "color_scheme": "scheme-d9d57e6e-047d-4f31-8eba-dd2df95ba64b"
+      }
+    },
+    "multicolumn_wBaA9A": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xRKKhV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/healthy-digestion.png",
+            "title": "Optimal Digestion",
+            "text": "<p>Expertly cooked fresh meat with prebiotics from chicory and yeasts means easy digestion.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ai3kji": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/healthy-skin-and-coat.png",
+            "title": "Healthy Skin & Coat",
+            "text": "<p>Fresh meat contains more healthy fats that are crucial for maintaining a healthy skin and coat.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RAUKcB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/supports-natural-immunity.png",
+            "title": "Supports natural immunity",
+            "text": "<p>Designed with the right balance of omega 3 and 6 to activate the body’s natural anti-inflammatory response.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_xRKKhV",
+        "column_ai3kji",
+        "column_RAUKcB"
+      ],
+      "settings": {
+        "title": "9 out of 10 customers see the difference",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-d9d57e6e-047d-4f31-8eba-dd2df95ba64b",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "title_two_col_image_dmzbTk": {
@@ -225,6 +281,7 @@
   "order": [
     "section_two_column_hero_gbp7Ai",
     "three_column_with_title_UtRUHE",
+    "multicolumn_wBaA9A",
     "title_two_col_image_dmzbTk",
     "product_collection_slider_RAW3hh",
     "email_signup_dr4dM8"
