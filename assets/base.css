@@ -3838,17 +3838,17 @@ details-disclosure > details {
   margin-left: 3px;
 }
 
-.section-three-col .column-grid {
+/* .section-three-col .column-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-}
+} */
 
-.section-three-col .column-image {
+/* .section-three-col .column-image {
     width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
-  }
+  } */
 
 .section-template--16947101630542__multicolumn_wBaA9A-padding .multicolumn-card__info h3 {
   font-family: Rodetta;
