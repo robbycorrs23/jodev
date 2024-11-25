@@ -3877,7 +3877,7 @@ details-disclosure > details {
 }
 
 @media screen and (min-width: 750px) {
-  .section-template--16947101630542__multicolumn_wBaA9A-padding .multicolumn-card__image img {
+  .section-template--16947101630542__multicolumn_wBaA9A-padding .multicolumn-card__image {
     max-width: 112px;
   }
 }
@@ -3888,7 +3888,7 @@ details-disclosure > details {
     gap: 3rem;
   }
 
-  .section-template--16947101630542__multicolumn_wBaA9A-padding .multicolumn-card__image img {
+  .section-template--16947101630542__multicolumn_wBaA9A-padding .multicolumn-card__image {
     max-width: 200px;
   }
 }
