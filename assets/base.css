@@ -3795,10 +3795,6 @@ details-disclosure > details {
 
 /*** Multicolumn Custom ***/
 
-.section-template--16947101630542__multicolumn_wBaA9A-padding #Slide-template--16947101630542__multicolumn_wBaA9A-1 .multicolumn-card {
-  background: #fff;
-}
-
 .section-template--16947101630542__multicolumn_wBaA9A-padding .title-wrapper-with-link {
   text-align: center;
   margin-bottom: 3rem;
@@ -3815,7 +3811,11 @@ details-disclosure > details {
   color: #271267;
 }
 
-.section-three-col .section-subtitle {
+.section-template--16947101630542__multicolumn_wBaA9A-padding #Slide-template--16947101630542__multicolumn_wBaA9A-1 .multicolumn-card {
+  background: #fff;
+}
+
+.section-template--16947101630542__multicolumn_wBaA9A-padding .section-subtitle {
   font-family: RooneySans;
   font-size: 0.9rem;
   font-weight: 340;
@@ -3826,7 +3826,7 @@ details-disclosure > details {
   color: #271267;
 }
 
-.section-three-col .caption-sup {
+.section-template--16947101630542__multicolumn_wBaA9A-padding .caption-sup {
   font-family: RooneySans;
   font-size: 12px;
   font-weight: 420;
