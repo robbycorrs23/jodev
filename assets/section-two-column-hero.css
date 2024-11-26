@@ -54,6 +54,11 @@
   .flex-hero__column {
     flex: 1;
   }
+
+  .flex-hero__column--right {
+    display: flex;
+    align-self: center;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -66,8 +71,7 @@
   }
 }
 
-.flex-hero__column--left,
-.flex-hero__column--right {
+.flex-hero__column--left {
   display: flex;
   align-self: center;
 }

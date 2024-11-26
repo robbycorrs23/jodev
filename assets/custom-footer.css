@@ -34,6 +34,10 @@
   .footer__social-icons {
     justify-content: center;
   }
+
+  .footer__heading {
+    text-align: left;
+  }
 }
 
 .footer__social-icon {
@@ -59,7 +63,7 @@
   gap: 0.5rem;
   padding: 0.5rem 0;
   text-decoration: none;
-  color: #384D5D;
+  color: #384d5d;
   font-family: RooneySans;
   font-size: 1.1rem;
   font-weight: 420;
@@ -72,9 +76,9 @@
 .footer__hiring-button {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background-color: #DF1995;
+  background-color: #df1995;
   font-family: RooneySans;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.1rem;
   text-align: center;
