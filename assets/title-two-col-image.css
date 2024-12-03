@@ -5,7 +5,6 @@
 
 .section-title-two-col .section-title {
   font-size: 2rem;
-  font-weight: 400;
   line-height: 2rem;
   text-align: center;
   max-width: 300px;
@@ -14,7 +13,6 @@
 
 .section-subtitle {
   font-size: 18px;
-  font-weight: 380;
   line-height: 24.3px;
   text-align: center;
 }

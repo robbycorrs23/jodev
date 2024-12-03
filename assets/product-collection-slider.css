@@ -4,23 +4,15 @@
 }
 
 .product-collection-slider .pcr-title {
-  font-family: Rodetta;
   font-size: 32px;
-  font-weight: 400;
   line-height: 32px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .product-collection-slider .pcr-subtitle {
-font-family: RooneySans;
-font-size: 18px;
-font-weight: 380;
-line-height: 24.3px;
-text-align: center;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+  font-size: 18px;
+  line-height: 24.3px;
+  text-align: center;
 }
 
 .product-collection-slider .pcr-pet-toggle {
@@ -40,18 +32,14 @@ text-decoration-skip-ink: none;
   font-size: 1.2rem;
   border-radius: 100px;
   transition: all 0.3s ease;
-  font-family: Rodetta;
-  font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.44999998807907104px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #271267;
 }
 
 .product-collection-slider .pcr-toggle-button.active {
-  background-color: #271267;
+  background-color: var(--primary-color);
   color: #ffffff;
   font-weight: 500;
 }
@@ -111,24 +99,17 @@ text-decoration-skip-ink: none;
 }
 
 .product-collection-slider .pcr-product-title {
-  font-family: RooneySans;
   font-size: 20px;
   font-weight: 600;
   line-height: 23px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   margin: 0 0 3px;
 }
 
 .product-collection-slider .pcr-product-price {
-  font-family: RooneySans;
-  font-size: 1rem;
   font-weight: 600;
   line-height: 1.2rem;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   margin-top: 0;
 }
 
@@ -141,23 +122,18 @@ text-decoration-skip-ink: none;
 }
 
 .product-collection-slider .pcr-feature-item {
-  font-family: RooneySans;
-  font-size: 1rem;
-  font-weight: 380;
   line-height: 1.2rem;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  position: relative; 
-  padding-left: 2rem; 
-  margin-bottom: 0.5rem; 
-  background-repeat: no-repeat; 
-  background-position: left center; 
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: left center;
   background-size: 1rem 1rem;
 }
 
 .product-collection-slider .pcr-feature-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -175,20 +151,15 @@ text-decoration-skip-ink: none;
 .product-collection-slider .pcr-button {
   display: none;
   padding: 1rem 2rem;
-  background-color: #271267;
-  color: white;
+  background-color: var(--primary-color);
+  color: #fff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
-  font-family: Rodetta;
   font-size: 1.1rem;
-  font-weight: 400;
   line-height: 1.1rem;
   letter-spacing: 0.44999998807907104px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-
 }
 
 .product-collection-slider .pcr-button.active {
