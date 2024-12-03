@@ -32,16 +32,16 @@
         {%- endif -%}
       </div>
     </div>
+  </div>
 
-    <div class="bottom-image-container">
-      {%- if section.settings.bottom_image != blank -%}
-        {{ section.settings.bottom_image | image_url: width: 1500 | image_tag:
-          loading: 'lazy',
-          class: 'bottom-image',
-          widths: '375, 550, 750, 1100, 1500'
-        }}
-      {%- endif -%}
-    </div>
+  <div class="bottom-image-container">
+    {%- if section.settings.bottom_image != blank -%}
+      {{ section.settings.bottom_image | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        class: 'bottom-image',
+        widths: '375, 550, 750, 1100, 1500'
+      }}
+    {%- endif -%}
   </div>
 </div>
 

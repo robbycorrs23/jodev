@@ -2844,6 +2844,7 @@ details[open] > .header__submenu {
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
+  font-size: 18px;
 }
 
 .header__menu-item:hover span {
@@ -3825,12 +3826,9 @@ details-disclosure > details {
 }
 
 .custom-button .button-text {
-  font-family: Rodetta;
   font-weight: 400;
   letter-spacing: 0.44999998807907104px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 @media screen and (min-width: 1101px) {
@@ -3891,13 +3889,10 @@ details-disclosure > details {
 }
 
 .section-template--16947101630542__multicolumn_wBaA9A-padding .title {
-  font-family: Rodetta;
   font-size: 2rem;
   font-weight: 400;
   line-height: 2rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #271267;
 }
 
@@ -3910,50 +3905,29 @@ details-disclosure > details {
 
 .section-template--16947101630542__multicolumn_wBaA9A-padding
   .section-subtitle {
-  font-family: RooneySans;
   font-size: 0.9rem;
   font-weight: 340;
   line-height: 1.1rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #271267;
 }
 
 .section-template--16947101630542__multicolumn_wBaA9A-padding .caption-sup {
-  font-family: RooneySans;
   font-size: 12px;
   font-weight: 420;
   line-height: 12px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #271267;
   margin-left: 3px;
 }
 
-/* .section-three-col .column-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-} */
-
-/* .section-three-col .column-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1.5rem;
-  } */
-
 .section-template--16947101630542__multicolumn_wBaA9A-padding
   .multicolumn-card__info
   h3 {
-  font-family: Rodetta;
   font-size: clamp(0.8rem, 1.3vw, 1.5rem);
   font-weight: 400;
   line-height: 1.5rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   border-radius: 4px;
   padding: 2px 6px;
   color: #271267;
@@ -3963,13 +3937,10 @@ details-disclosure > details {
   .multicolumn-card__info
   .rte
   p {
-  font-family: RooneySans;
   font-size: 16px;
   font-weight: 340;
   line-height: 21.6px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #271267;
   max-width: 400px;
 }

@@ -8,8 +8,6 @@
   font-weight: 400;
   line-height: 2rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   max-width: 300px;
   margin: 0 auto;
 }
@@ -19,8 +17,6 @@
   font-weight: 380;
   line-height: 24.3px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .two-column-grid {
@@ -45,7 +41,9 @@
 }
 
 .bottom-image-container {
-  margin-top: 2rem;
+  padding-top: 2rem;
+  max-width: 1440px;
+  background-color: #9ee18c;
 }
 
 .bottom-image {

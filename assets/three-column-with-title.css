@@ -1,16 +1,15 @@
 .section-title-wrapper {
   text-align: center;
   margin-bottom: 3rem;
+  color: var(--primary-color);
 }
 
 .section-three-col .section-title {
   font-size: 2rem;
-  font-weight: 400;
   line-height: 2rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #271267;
+  max-width: 354px;
+  margin: 0 auto;
 }
 
 .section-three-col .section-subtitle {
@@ -18,9 +17,6 @@
   font-weight: 340;
   line-height: 1.1rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #271267;
 }
 
 .section-three-col .caption-sup {
@@ -28,9 +24,6 @@
   font-weight: 420;
   line-height: 12px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #271267;
   margin-left: 3px;
 }
 
@@ -51,11 +44,8 @@
   font-weight: 400;
   line-height: 1.5rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   border-radius: 4px;
   padding: 2px 6px;
-  color: #271267;
 }
 
 .section-three-col .column-text {
@@ -63,9 +53,6 @@
   font-weight: 340;
   line-height: 21.6px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #271267;
   max-width: 400px;
 }
 
