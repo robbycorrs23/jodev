@@ -48,6 +48,43 @@
     %}
 
     {% style %}
+
+    @font-face {
+      font-family: 'Rodetta';
+      src: url({{ 'Rodetta.woff2' | asset_url }}) format('woff2'),
+          url({{ 'Rodetta.ttf' | asset_url }}) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'RooneySans';
+      src: url({{ 'rooney-sans-regular.woff2' | asset_url }}) format('woff2'),
+          url({{ 'rooney-sans-regular.ttf' | asset_url }}) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'RooneySans';
+      src: url({{ 'rooney-sans-medium.woff2' | asset_url }}) format('woff2'),
+          url({{ 'rooney-sans-medium.ttf' | asset_url }}) format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'RooneySans';
+      src: url({{ 'rooney-sans-bold.woff2' | asset_url }}) format('woff2'),
+          url({{ 'rooney-sans-bold.ttf' | asset_url }}) format('truetype');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -100,12 +137,12 @@
       }
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: 'RooneySans', sans-serif;
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: 'Rodetta', serif;
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
