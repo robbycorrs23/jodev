@@ -4,8 +4,8 @@
 
 .footer__content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 24px;
   padding: 4rem 0;
   border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
 }
@@ -67,8 +67,6 @@
   font-size: 1.1rem;
   line-height: 1.5rem;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .footer__hiring-button {
@@ -78,9 +76,13 @@
   font-size: 0.9rem;
   line-height: 1.1rem;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #fff;
+}
+
+@media screen and (min-width: 750px) and (max-width: 960px) {
+  .footer__hiring-button {
+    font-size: 0.7rem;
+  }
 }
 
 .footer__bottom {
@@ -98,8 +100,6 @@
   font-size: 18px;
   line-height: 24.3px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 @media screen and (max-width: 749px) {
