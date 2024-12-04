@@ -21,7 +21,7 @@
       {%- for block in section.blocks -%}
         {%- if block.settings.product and block.settings.pet_type == 'dog' -%}
           {%- assign product = block.settings.product -%}
-          {%- assign age_metafield = product.metafields.custom.age -%}
+          {%- assign age_metafield = product.metafields.category.dog_age_group -%}
           <div class="pcr-product-item" {{ block.shopify_attributes }}>
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
               {%- if age_metafield != blank -%}
@@ -56,7 +56,7 @@
       {%- for block in section.blocks -%}
         {%- if block.settings.product and block.settings.pet_type == 'cat' -%}
           {%- assign product = block.settings.product -%}
-          {%- assign age_metafield = product.metafields.custom.age -%}
+          {%- assign age_metafield = product.metafields.category.cat_age_group -%}
           <div class="pcr-product-item" {{ block.shopify_attributes }}>
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
               {%- if age_metafield != blank -%}
