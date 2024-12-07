@@ -4,8 +4,8 @@
 
 .footer__content {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  gap: 24px;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 2%;
   padding: 4rem 0;
   border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
 }

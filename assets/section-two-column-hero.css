@@ -57,6 +57,7 @@
   .flex-hero__column--right {
     display: flex;
     align-self: center;
+    max-width: 620px;
   }
 }
 
@@ -73,6 +74,7 @@
 .flex-hero__column--left {
   display: flex;
   align-self: center;
+  max-width: 450px;
 }
 
 .flex-hero__column-content {
