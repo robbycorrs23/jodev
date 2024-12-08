@@ -50,9 +50,8 @@
 
 .product-collection-slider .pcr-product-grid {
   display: none;
-  gap: 2rem;
   margin-bottom: 3rem;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .product-collection-slider .pcr-product-grid.active {
@@ -65,7 +64,7 @@
   align-items: flex-start;
   text-align: center;
   height: 100%;
-  width: 33%;
+  width: 31%;
 }
 
 .product-collection-slider .pcr-image-box {
