@@ -6,7 +6,7 @@
 .product-collection-slider .pcr-title {
   font-size: 32px;
   line-height: 32px;
-  text-align: center;
+  margin-top: 0;
 }
 
 .product-collection-slider .pcr-subtitle {
@@ -21,7 +21,7 @@
   border-radius: 100px;
   margin: 0 auto 3rem;
   background: transparent;
-  width: 227px;
+  width: 219px;
 }
 
 .product-collection-slider .pcr-toggle-button {

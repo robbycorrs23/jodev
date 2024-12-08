@@ -21,12 +21,17 @@
       {%- for block in section.blocks -%}
         {%- if block.settings.product and block.settings.pet_type == 'dog' -%}
           {%- assign product = block.settings.product -%}
-          {%- assign age_metafield = product.metafields.category.dog_age_group -%}
           <div class="pcr-product-item" {{ block.shopify_attributes }}>
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
-              {%- if age_metafield != blank -%}
-                <span class="pcr-age-badge">{{ age_metafield }}</span>
-              {%- endif -%}
+              {%- for option in product.options_with_values -%}
+                {%- if option.name == 'Age Group' or option.name == 'Dog Age Group' -%}
+                  {%- for value in option.values -%}
+                    {%- if forloop.first -%}
+                      <span class="pcr-age-badge">{{ value }}</span>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
               {%- if product.featured_image -%}
                 {{ product.featured_image | image_url: width: 400 | image_tag:
                   loading: 'lazy',
@@ -56,12 +61,17 @@
       {%- for block in section.blocks -%}
         {%- if block.settings.product and block.settings.pet_type == 'cat' -%}
           {%- assign product = block.settings.product -%}
-          {%- assign age_metafield = product.metafields.category.cat_age_group -%}
           <div class="pcr-product-item" {{ block.shopify_attributes }}>
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
-              {%- if age_metafield != blank -%}
-                <span class="pcr-age-badge">{{ age_metafield }}</span>
-              {%- endif -%}
+              {%- for option in product.options_with_values -%}
+                {%- if option.name == 'Age Group' or option.name == 'Cat Age Group' -%}
+                  {%- for value in option.values -%}
+                    {%- if forloop.first -%}
+                      <span class="pcr-age-badge">{{ value }}</span>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
               {%- if product.featured_image -%}
                 {{ product.featured_image | image_url: width: 400 | image_tag:
                   loading: 'lazy',

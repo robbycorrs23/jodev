@@ -27,7 +27,7 @@
 
 .section-three-col .column-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .section-three-col .column-image {
@@ -59,8 +59,12 @@
 
 @media screen and (max-width: 749px) {
   .section-three-col .column-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-three-col .column-item {
+    width: 70%;
   }
 
   .section-three-col .column-image {
