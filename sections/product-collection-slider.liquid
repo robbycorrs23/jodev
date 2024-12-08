@@ -17,19 +17,16 @@
       <button class="pcr-toggle-button" data-target="cat">Cats</button>
     </div>
 
-    <div class="pcr-product-grid active" id="dog-products">
+    <div class="pcr-product-grid" id="dog-products">
       {%- for block in section.blocks -%}
         {%- if block.settings.product and block.settings.pet_type == 'dog' -%}
           {%- assign product = block.settings.product -%}
           <div class="pcr-product-item" {{ block.shopify_attributes }}>
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
-              {%- for option in product.options_with_values -%}
-                {%- if option.name == 'Age Group' or option.name == 'Dog Age Group' -%}
-                  {%- for value in option.values -%}
-                    {%- if forloop.first -%}
-                      <span class="pcr-age-badge">{{ value }}</span>
-                    {%- endif -%}
-                  {%- endfor -%}
+              {%- for tag in product.tags -%}
+                {%- if tag contains 'Adult' or tag contains 'All Ages' -%}
+                  <span class="pcr-age-badge">{{ tag }}</span>
+                  {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
               {%- if product.featured_image -%}
@@ -63,13 +60,10 @@
           {%- assign product = block.settings.product -%}
           <div class="pcr-product-item" {{ block.shopify_attributes }}>
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
-              {%- for option in product.options_with_values -%}
-                {%- if option.name == 'Age Group' or option.name == 'Cat Age Group' -%}
-                  {%- for value in option.values -%}
-                    {%- if forloop.first -%}
-                      <span class="pcr-age-badge">{{ value }}</span>
-                    {%- endif -%}
-                  {%- endfor -%}
+              {%- for tag in product.tags -%}
+                {%- if tag contains 'Adult' or tag contains 'All Ages' -%}
+                  <span class="pcr-age-badge">{{ tag }}</span>
+                  {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
               {%- if product.featured_image -%}
