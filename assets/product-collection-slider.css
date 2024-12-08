@@ -74,19 +74,20 @@
   margin-bottom: 1.5rem;
   border-radius: 8px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .product-collection-slider .pcr-age-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: white;
+  padding: 3px 14px;
+  background-color: #fff;
   border-radius: 4px;
-  font-weight: bold;
   font-size: 14px;
+  color: #007377;
 }
 
 .product-collection-slider .pcr-product-image {

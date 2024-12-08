@@ -25,7 +25,7 @@
             <div class="pcr-image-box" style="background-color: {{ block.settings.background_color }}">
               {%- for tag in product.tags -%}
                 {%- if tag contains 'Adult' or tag contains 'All Ages' -%}
-                  <span class="pcr-age-badge">{{ tag }}</span>
+                  <span class="pcr-age-badge" style="color: {{ block.settings.background_color }}">{{ tag }}</span>
                   {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
