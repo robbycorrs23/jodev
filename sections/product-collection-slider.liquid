@@ -17,7 +17,7 @@
       <button class="pcr-toggle-button" data-target="cat">Cats</button>
     </div>
 
-    <div class="pcr-product-grid" id="dog-products">
+    <div class="pcr-product-grid active" id="dog-products">
       {%- for block in section.blocks -%}
         {%- if block.settings.product and block.settings.pet_type == 'dog' -%}
           {%- assign product = block.settings.product -%}
