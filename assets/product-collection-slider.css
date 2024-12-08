@@ -50,14 +50,13 @@
 
 .product-collection-slider .pcr-product-grid {
   display: none;
-  grid-template-columns: repeat(3, minmax(250px, 350px));
   gap: 2rem;
   margin-bottom: 3rem;
   justify-content: center;
 }
 
 .product-collection-slider .pcr-product-grid.active {
-  display: grid;
+  display: flex;
 }
 
 .product-collection-slider .pcr-product-item {
@@ -66,6 +65,7 @@
   align-items: flex-start;
   text-align: center;
   height: 100%;
+  width: 33%;
 }
 
 .product-collection-slider .pcr-image-box {
@@ -87,6 +87,7 @@
   background-color: white;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .product-collection-slider .pcr-product-image {
@@ -96,17 +97,16 @@
 
 .product-collection-slider .pcr-product-title {
   font-size: 20px;
-  font-weight: 600;
   line-height: 23px;
   text-align: left;
   margin: 0 0 3px;
 }
 
 .product-collection-slider .pcr-product-price {
-  font-weight: 600;
   line-height: 1.2rem;
   text-align: left;
   margin-top: 0;
+  font-size: 16px;
 }
 
 .product-collection-slider .pcr-features {

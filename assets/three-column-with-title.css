@@ -55,6 +55,10 @@
   .section-three-col .column-image {
     max-width: 112px;
   }
+
+  .section-three-col .column-item {
+    width: 31%;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -77,5 +81,4 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 31%;
 }
