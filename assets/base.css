@@ -389,7 +389,7 @@ blockquote {
 }
 
 .caption-with-letter-spacing--medium {
-  theme.liq: 1.2rem;
+  font-size: 1.2rem;
   letter-spacing: 0.16rem;
 }
 
@@ -2278,10 +2278,10 @@ input[type="checkbox"] {
 
 .announcement-bar__message {
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.6rem 0;
   margin: 0;
-  letter-spacing: 0.1rem;
-  min-height: 3.8rem;
+  font-size: 1rem;
+  letter-spacing: 0px;
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
@@ -3825,6 +3825,9 @@ details-disclosure > details {
   font-weight: 400;
   letter-spacing: 0.44999998807907104px;
   text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Rodetta", arial;
 }
 
 @media screen and (min-width: 1101px) {
@@ -3965,4 +3968,8 @@ details-disclosure > details {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.header__menu-item {
+  font-weight: 500;
 }
