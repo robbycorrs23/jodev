@@ -17,20 +17,18 @@
         {%- endif -%}
         
         {%- if section.settings.show_social -%}
-          <ul class="footer__social-icons" role="list">
+          <ul class="footersocial-icons" role="list">
             {%- for i in (1..5) -%}
-              {%- assign icon_setting = 'social_icon_' | append: forloop.index -%}
-              {%- assign url_setting = 'social_url_' | append: forloop.index -%}
+              {%- assign icon_setting = 'socialicon' | append: forloop.index -%}
+              {%- assign url_setting = 'socialurl' | append: forloop.index -%}
               {%- if section.settings[icon_setting] != blank and section.settings[url_setting] != blank -%}
                 <li>
-                  <a href="{{ section.settings[url_setting] }}" class="footer__social-link">
-                    {%- # Only output the image, no additional text -%}
+                  <a href="{{ section.settings[url_setting] }}">
                     {{ section.settings[icon_setting] | image_url: width: 24 | image_tag:
-                      class: 'footer__social-icon',
+                      class: 'footersocial-icon',
                       loading: 'lazy',
                       width: 24,
-                      height: 24,
-                      alt: section.settings[icon_setting] | split: '.' | first | split: '_' | last | capitalize
+                      height: 24
                     }}
                   </a>
                 </li>
