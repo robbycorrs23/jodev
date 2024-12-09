@@ -157,6 +157,7 @@
   line-height: 1.1rem;
   letter-spacing: 0.44999998807907104px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .product-collection-slider .pcr-button.active {
