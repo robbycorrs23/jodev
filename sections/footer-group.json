@@ -14,14 +14,6 @@
     "custom_footer_83tgkt": {
       "type": "custom-footer",
       "blocks": {
-        "link_list_TcReqP": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Menu",
-            "menu": "",
-            "show_hiring_button": false
-          }
-        },
         "link_list_kX6AWh": {
           "type": "link_list",
           "settings": {
@@ -48,7 +40,6 @@
         }
       },
       "block_order": [
-        "link_list_TcReqP",
         "link_list_kX6AWh",
         "link_list_Ezxq6n",
         "link_list_rYirYT"
