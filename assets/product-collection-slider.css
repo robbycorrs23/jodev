@@ -7,13 +7,14 @@
   font-size: 32px;
   line-height: 32px;
   margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .product-collection-slider .pcr-subtitle {
   font-size: 18px;
   line-height: 24.3px;
   text-align: center;
-  color: var(--dark-gray-color);
+  font-weight: 500;
 }
 
 .product-collection-slider .pcr-pet-toggle {
