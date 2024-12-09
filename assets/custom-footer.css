@@ -117,10 +117,10 @@
 
 .footer__legal-link {
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--color-foreground);
 }
 
 .footer__copyright {
   font-size: 0.875rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--color-foreground);
 }
