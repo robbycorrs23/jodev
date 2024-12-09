@@ -4,18 +4,21 @@
   <div class="page-width section-{{ section.id }}">
     <div class="es-title-wrapper">
       {%- if section.settings.title != blank -%}
-        <h2 class="es-title">{{ section.settings.title }}</h2>
+        <h2 class="es-title" id="newsletter-heading-{{ section.id }}">{{ section.settings.title }}</h2>
       {%- endif -%}
       
       {%- if section.settings.subtitle != blank -%}
         <div class="es-subtitle">{{ section.settings.subtitle }}</div>
       {%- endif -%}
     </div>
-
     <div class="es-form-wrapper">
       {%- form 'customer', class: 'es-form' -%}
         <input type="hidden" name="contact[tags]" value="newsletter">
         <div class="es-input-group">
+          <label for="Email-{{ section.id }}" class="es-label">
+            Email address
+            <span class="visually-hidden">(required)</span>
+          </label>
           <input
             type="email"
             name="contact[email]"
@@ -23,33 +26,34 @@
             class="es-input"
             value="{{ form.email }}"
             placeholder="Your email"
+            aria-describedby="newsletter-heading-{{ section.id }}"
             required
           >
-          <button type="submit" class="es-button" name="commit" aria-label="Subscribe">
+          <button type="submit" class="es-button" name="commit" aria-label="Subscribe to our newsletter">
             {%- if section.settings.submit_image != blank -%}
               {{ section.settings.submit_image | image_url: width: 24 | image_tag:
                 loading: 'lazy',
                 class: 'es-submit-icon',
                 width: 24,
-                height: 24
+                height: 24,
+                alt: ""
               }}
             {%- endif -%}
           </button>
         </div>
       {%- endform -%}
     </div>
-
     {%- if section.settings.below_text != blank -%}
       <div class="es-below-text">
         {{ section.settings.below_text }}
       </div>
     {%- endif -%}
-
     {%- if section.settings.bottom_image != blank -%}
       <div class="es-bottom-image">
         {{ section.settings.bottom_image | image_url: width: 1500 | image_tag:
           loading: 'lazy',
-          widths: '375, 550, 750, 1100, 1500'
+          widths: '375, 550, 750, 1100, 1500',
+          alt: ""
         }}
       </div>
     {%- endif -%}

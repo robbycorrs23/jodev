@@ -13,6 +13,7 @@
   font-size: 18px;
   line-height: 24.3px;
   text-align: center;
+  color: var(--dark-gray-color);
 }
 
 .product-collection-slider .pcr-pet-toggle {
