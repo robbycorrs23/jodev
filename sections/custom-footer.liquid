@@ -44,7 +44,7 @@
           {%- when 'link_list' -%}
             <div class="footer__column footer__column--menu" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
-                <h2 class="footer__heading">{{ block.settings.heading }}</h2>
+                <div class="footer__heading">{{ block.settings.heading }}</div>
               {%- endif -%}
               
               {%- if block.settings.menu != blank -%}
