@@ -55,6 +55,7 @@
   margin: 0 0 1rem;
   font-size: 1.3rem;
   font-weight: 500;
+  color: #384d5d;
 }
 
 .footer__menu {
@@ -70,6 +71,7 @@
   text-decoration: none;
   color: #384d5d;
   font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .footer__hiring-button {
@@ -80,6 +82,7 @@
   line-height: 1.1rem;
   text-align: center;
   color: #fff;
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 750px) and (max-width: 960px) {

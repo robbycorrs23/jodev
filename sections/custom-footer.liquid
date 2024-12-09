@@ -22,13 +22,16 @@
               {%- assign icon_setting = 'social_icon_' | append: forloop.index -%}
               {%- assign url_setting = 'social_url_' | append: forloop.index -%}
               {%- if section.settings[icon_setting] != blank and section.settings[url_setting] != blank -%}
+                {%- assign icon_name = section.settings[icon_setting] | split: '.' | first -%}
+                {%- assign platform_name = icon_name | split: '_' | last | capitalize -%}
                 <li>
                   <a href="{{ section.settings[url_setting] }}">
                     {{ section.settings[icon_setting] | image_url: width: 24 | image_tag:
                       class: 'footer__social-icon',
                       loading: 'lazy',
                       width: 24,
-                      height: 24
+                      height: 24,
+                      alt: platform_name | append: ' social media'
                     }}
                   </a>
                 </li>
