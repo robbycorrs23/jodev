@@ -14,6 +14,14 @@
     "custom_footer_83tgkt": {
       "type": "custom-footer",
       "blocks": {
+        "link_list_TcReqP": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Menu",
+            "menu": "",
+            "show_hiring_button": false
+          }
+        },
         "link_list_kX6AWh": {
           "type": "link_list",
           "settings": {
@@ -40,6 +48,7 @@
         }
       },
       "block_order": [
+        "link_list_TcReqP",
         "link_list_kX6AWh",
         "link_list_Ezxq6n",
         "link_list_rYirYT"
@@ -67,16 +76,59 @@
     },
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_cGMGfa": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "brand_information_hq3rw4": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "link_list_Cn7eH4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop"
+          }
+        },
+        "link_list_MRV3BF": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Learn",
+            "menu": "learn"
+          }
+        },
+        "link_list_GmD99C": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "support"
+          }
+        }
+      },
+      "block_order": [
+        "image_cGMGfa",
+        "brand_information_hq3rw4",
+        "link_list_Cn7eH4",
+        "link_list_MRV3BF",
+        "link_list_GmD99C"
+      ],
       "disabled": true,
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-d9d57e6e-047d-4f31-8eba-dd2df95ba64b",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
+        "enable_follow_on_shop": false,
         "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
         "show_policy": true,
         "margin_top": 0,
         "padding_top": 36,
