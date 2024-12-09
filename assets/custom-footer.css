@@ -25,9 +25,15 @@
 
 .footer__social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.2em;
   padding: 0;
   list-style: none;
+}
+
+@media screen and (max-width: 900px) {
+  .footer__social-icons {
+    gap: 0.8em;
+  }
 }
 
 @media screen and (max-width: 749px) {
